@@ -2,6 +2,13 @@
 # Reference Core Orchestrator
 # =====================
 
+"""
+Public Reference Implementation Notice:
+This file intentionally provides a minimal, non-proprietary simulation of the Core
+cognitive loop for demonstration and academic transparency. It does not represent
+the full internal architecture, algorithms, or proprietary system design.
+"""
+
 import sys
 from datetime import datetime
 from typing import List, Dict, Any
@@ -9,6 +16,31 @@ from typing import List, Dict, Any
 # Enforce Python version
 if sys.version_info < (3, 10):
     raise RuntimeError("This demo requires Python 3.10 or higher.")
+
+
+# =====================
+# Minimal Public Stubs
+# =====================
+
+class DummySubsystem:
+    """Placeholder subsystem for public reference demo."""
+    def __repr__(self):
+        return "<PublicReferenceSubsystem>"
+
+
+class Persona:
+    """Public persona anchor for demo identity continuity."""
+
+    def __init__(self, name: str):
+        self.name = name
+
+    def describe(self):
+        return {"name": self.name}
+
+
+# =====================
+# Core Orchestrator
+# =====================
 
 class Core:
     """
